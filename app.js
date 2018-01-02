@@ -1,0 +1,10 @@
+var light=require("./light");
+require("./index");
+var query=require("./query");
+var body=require("./post");
+var cookie=require("./cookie");
+var app=light();
+app.use(query());
+app.use(body());
+app.use(cookie("12312"));
+app.listen(8888);
